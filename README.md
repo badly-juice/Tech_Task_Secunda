@@ -7,6 +7,27 @@
 **Стек:** FastAPI + Pydantic v2, SQLAlchemy 2.0 (async), PostgreSQL 18,
 RabbitMQ 4 (FastStream), Alembic, Docker Compose, structlog, httpx, pytest.
 
+
+## Демонстрационный стенд
+
+Развёрнутая версия сервиса доступна по постоянной ссылке, его можно открыть
+в браузере и проверить вручную без локального запуска: создать платёж,
+запросить его статус, проследить доставку webhook'а.
+
+| Ресурс | Адрес |
+|---|---|
+| Swagger UI | https://tech-task-secunda.boxd.sh/docs |
+| ReDoc | https://tech-task-secunda.boxd.sh/redoc |
+| OpenAPI-схема | https://tech-task-secunda.boxd.sh/openapi.json |
+| Health check | https://tech-task-secunda.boxd.sh/health |
+| RabbitMQ Management | https://rabbitmq.tech-task-secunda.boxd.sh (guest / guest) |
+| Демо-приёмник webhook'ов | https://webhooks.tech-task-secunda.boxd.sh |
+
+Все запросы к API, как и при локальном запуске, требуют заголовок
+`X-API-Key` (см. раздел «Аутентификация»). Для ручной проверки удобнее всего
+использовать Swagger UI: он позволяет выполнять запросы прямо из браузера.
+
+
 ## Запуск
 
 ```bash
